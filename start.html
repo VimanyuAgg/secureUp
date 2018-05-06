@@ -40,6 +40,10 @@
 
 		        myHealthSound = new Audio("health.mpeg");
 		        bgsound = new Audio("strolling_along.mp3");
+		        bgsound.addEventListener('ended', function() {
+					this.currentTime = 0;
+					this.play();
+				}, false)
 				bgsound.play();
 		        var player = {
 		          color: "#00A",
